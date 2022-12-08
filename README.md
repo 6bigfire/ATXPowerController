@@ -75,8 +75,22 @@ Pin2 接旁边的GND焊点。
 
 ## 一体机成品图
 
-![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E4%B8%80%E4%BD%93%E6%9C%BA%E5%86%85%E9%83%A8.jpg)
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/allin1l.jpg)
 
-![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E4%B8%80%E4%BD%93%E6%9C%BA.jpg)
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/allin1r.jpg)
 
-![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E6%8E%A7%E5%88%B6%E5%99%A8.jpg)
+
+
+## 把TinyMostor装进ITX机箱中
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/allin1i.jpg)
+
+
+
+## 控制器成品图
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/controller.jpg)
+
+
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/using.jpg)
