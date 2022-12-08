@@ -41,6 +41,11 @@ Pin2、Pin4 用来控制机箱前面板LED指示灯，低电平表示灯亮。
 
 ## 控制器工作原理
 
+- ATXCONTROL输出状态与HOSTPOWER保持一致，小主机上电时ATXCONTROL输出低电平打开ATX电源，小主机关机时ATXCONTROL输出高电平关闭ATX供电。
+- HOSTCONTROL输出状态与POWERBUTTON保持一致，机箱面板电源按钮按下时HOSTCONTROL输出低电平，机箱面板电源按钮释放时HOSTCONTRL输出高电平。
+- LED1输出状态与ATXPOWER保持一致，ATX电源打开时LED1输出低电平，ATX电源关断时LED1输出高电平。
+- LED0输出状态与HOSTPOWER保持一致，主机开机后LED0输出低电平，主机关机后LED0输出高电平。
+
 | STATUS    | STATUS   | STATUS      | LED      | LED      | ACTION         | ACTION        |
 | --------- | -------- | ----------- | -------- | -------- | -------------- | ------------- |
 |           |          |             |          |          |                |               |
