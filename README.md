@@ -37,9 +37,9 @@ Pin2、Pin4 用来控制机箱前面板LED指示灯，低电平表示灯亮。
 
 ## 控制器工作原理
 
-|           |          |             |          |          |                |               |
+| STATUS    | STATUS   | STATUS      | LED      | LED      | ACTION         | ACTION        |
 | --------- | -------- | ----------- | -------- | -------- | -------------- | ------------- |
-| STATUS    | LED      | ACTION      |          |          |                |               |
+|           |          |             |          |          |                |               |
 | HostPower | ATXPower | PowerButton | pinLED0  | pinLED1  | pinHostControl | pinATXControl |
 | OPEN      | OPEN     | —           | POWERON  | POWERON  | PowerButton    | POWERON       |
 | OPEN      | CLOSE    | —           | POWERON  | POWEROFF | PowerButton    | POWERON       |
