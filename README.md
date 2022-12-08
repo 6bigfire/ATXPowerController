@@ -1,0 +1,2 @@
+# ATXPowerController
+ 利用ITX机箱，为P310S型小主机扩展了显卡，做成了一体机，为了能让ATX电源能够与小主机同步开关机，所以基于ArduinoNano设计了一个小电源控制器。
