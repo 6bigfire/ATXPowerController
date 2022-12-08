@@ -72,3 +72,11 @@ Pin4 HOSTPOWER 改造如下图所示，连接在了主板声卡芯片的供电�
 Pin2 接旁边的GND焊点。
 
 ![HOSTPOWER.jpg](https://github.com/6bigfire/ATXPowerController/blob/main/Images/HOSTPOWER.jpg)
+
+## 一体机成品图
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E4%B8%80%E4%BD%93%E6%9C%BA%E5%86%85%E9%83%A8.jpg)
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E4%B8%80%E4%BD%93%E6%9C%BA.jpg)
+
+![](https://github.com/6bigfire/ATXPowerController/blob/main/Images/%E6%8E%A7%E5%88%B6%E5%99%A8.jpg)
