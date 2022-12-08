@@ -14,8 +14,8 @@
 
 JP2连接小主机的开机信号线及主机上电指示。
 
-|     |         |         |             |
-| --- | ------- | ------- | ----------- |
+
+
 | 描述  | Pin No. | Pin No. | 描述          |
 | GND | 1       | 2       | HOSTCONTROL |
 | GND | 3       | 4       | HOSTPOWER   |
@@ -28,8 +28,8 @@ Pin3 连接小主机内的+5V电源，主机上电后为高电平，主机待机
 
 JP3连接机箱前面板的电源按钮和LED指示灯
 
-|       |         |         |              |
-|:-----:|:-------:|:-------:|:------------:|
+
+
 | 描述    | Pin No. | Pin No. | 描述           |
 | +3.3V | 1       | 2       | LED1         |
 | GND   | 3       | 4       | LED0         |
@@ -41,14 +41,13 @@ Pin2、Pin4 用来控制机箱前面板LED指示灯，低电平表示灯亮。
 
 ## 控制器工作原理
 
-|           |          |             |          |          |                |               |
-| --------- | -------- | ----------- | -------- | -------- | -------------- | ------------- |
+
+
 | STATES    | LED      | ACTION      |          |          |                |               |
 | HostPower | ATXPower | PowerButton | pinLED0  | pinLED1  | pinHostControl | pinATXControl |
 | OPEN      | OPEN     | —           | POWERON  | POWERON  | PowerButton    | POWERON       |
 | OPEN      | CLOSE    | —           | POWERON  | POWEROFF | PowerButton    | POWERON       |
-|           |          |             |          |          |                |               |
-|           |          |             |          |          |                |               |
+
 | CLOSE     | OPEN     | —           | POWEROFF | POWERON  | PowerButton    | POWEROFF      |
 | CLOSE     | CLOSE    | —           | POWEROFF | POWEROFF | PowerButton    | POWEROFF      |
 
