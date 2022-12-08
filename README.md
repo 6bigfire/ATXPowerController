@@ -2,13 +2,13 @@
 
  利用ITX机箱，为P310S型小主机扩展了显卡，做成了一体机，为了能让ATX电源能够与小主机同步开关机，所以基于ArduinoNano设计了一个小电源控制器。
 
-![asm0001.jpg](D:\Github\ATXPowerController\Images\asm0001.jpg)
+![asm0001.jpg](https://github.com/6bigfire/ATXPowerController/blob/main/Images/asm0001.jpg)
 
 ## 接口说明
 
 看图说话，正常使用时，只需要用到JP2和JP3两个插座。
 
-![pcb_3d.png](D:\Github\ATXPowerController\Images\pcb_3d.png)
+![pcb_3d.png](https://github.com/6bigfire/ATXPowerController/blob/main/Images/pcb_3d.png)
 
 ### JP2 接口说明
 
@@ -53,7 +53,7 @@ Pin1 连接主板上电源按钮的外壳GND。
 
 Pin2连接在电源按钮旁的贴片三极管的集电极，该脚接地时代表主机电源按钮被按下。
 
-![HOSTCONTROL.jpg](D:\Github\ATXPowerController\Images\HOSTCONTROL.jpg)
+![HOSTCONTROL.jpg](https://github.com/6bigfire/ATXPowerController/blob/main/Images/HOSTCONTROL.jpg)
 
 ### 引出HOSTPOWER
 
@@ -61,4 +61,4 @@ Pin4 HOSTPOWER 改造如下图所示，连接在了主板声卡芯片的供电�
 
 Pin2 接旁边的GND焊点。
 
-![](D:\Github\ATXPowerController\Images\HOSTPOWER.jpg)
+![HOSTPOWER.jpg](https://github.com/6bigfire/ATXPowerController/blob/main/Images/HOSTPOWER.jpg)
