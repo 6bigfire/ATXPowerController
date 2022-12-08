@@ -4,7 +4,7 @@
 
 ![asm0001.jpg](https://github.com/6bigfire/ATXPowerController/blob/main/Images/asm0001.jpg)
 
-## 接口说明
+## 控制器接口说明
 
 看图说话，正常使用时，只需要用到JP2和JP3两个插座。
 
@@ -38,6 +38,23 @@ JP3连接机箱前面板的电源按钮和LED指示灯
 Pin5、Pin6 连接机箱面板的电源按钮，按钮开关本身是无源的，无方向性。
 
 Pin2、Pin4 用来控制机箱前面板LED指示灯，低电平表示灯亮。
+
+## 控制器工作原理
+
+
+
+
+
+|           |          |             |          |          |                |               |
+| --------- | -------- | ----------- | -------- | -------- | -------------- | ------------- |
+| STATES    | LED      | ACTION      |          |          |                |               |
+| HostPower | ATXPower | PowerButton | pinLED0  | pinLED1  | pinHostControl | pinATXControl |
+| OPEN      | OPEN     | —           | POWERON  | POWERON  | PowerButton    | POWERON       |
+| OPEN      | CLOSE    | —           | POWERON  | POWEROFF | PowerButton    | POWERON       |
+|           |          |             |          |          |                |               |
+|           |          |             |          |          |                |               |
+| CLOSE     | OPEN     | —           | POWEROFF | POWERON  | PowerButton    | POWEROFF      |
+| CLOSE     | CLOSE    | —           | POWEROFF | POWEROFF | PowerButton    | POWEROFF      |
 
 ## 小主机改造
 
