@@ -21,25 +21,36 @@ const int pinATXControl     = 13;
 
 // variables will change:
 #define UP            1
-#define PUSH          0
+#define DOWN          0
 #define OPEN          1
 #define CLOSE         0
-#define LEDON         0
-#define LEDOFF        0
 #define POWERON       0
 #define POWEROFF      1
 
-int PowerButton   = UP;  // variable for reading the pinPowerButton status
-int ATXPower      = CLOSE;  // variable for reading the pinATXPower status
-int HostPower     = CLOSE;  // variable for reading the pinATXControl status
+int PowerButton       = UP;  // variable for reading the pinPowerButton status
+int ATXPower          = CLOSE;  // variable for reading the pinATXPower status
+int HostPower         = CLOSE;  // variable for reading the pinATXControl status
 
+int PowerButtonCount  = 0;
+int PBLastStatus      =UP;
+int PowerButtonStatus =UP;
+
+void PowerSwitch(int button) {
+  if (button <= DOWN ) {
+    digitalWrite(pinHostControl, DOWN);
+    PowerButtonStatus = DOWN;
+  } else {
+    digitalWrite(pinHostControl, UP);
+    PowerButtonStatus = UP;
+  }
+}
 
 void setup() {
   // initialize the output pins:
   pinMode(pinHostControl, OUTPUT);
   pinMode(pinATXControl, OUTPUT);
-  digitalWrite(pinHostControl, POWEROFF);
   digitalWrite(pinATXControl, POWEROFF);
+  PowerSwitch(UP);
 
   pinMode(pinLED0, OUTPUT);
   pinMode(pinLED1, OUTPUT);
@@ -72,6 +83,17 @@ void loop() {
   }
   
   // pinHostControl link to the pinPowerButton:
+  PBLastStatus = PowerButton;
   PowerButton = digitalRead(pinPowerButton);
-  digitalWrite(pinHostControl, PowerButton);
+
+  if (PowerButton == PBLastStatus) {
+    PowerButtonCount ++;
+    if (PowerButtonCount >= 3) {
+      PowerButtonCount = 3;
+      if (PowerButton != PowerButtonStatus) PowerSwitch(PowerButton);
+    }
+  } else {
+    PowerButtonCount = 0;
+  }
+  delay(10);
 }
